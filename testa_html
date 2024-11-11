@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório do Trabalho</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        header, section, footer {
+            margin-bottom: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .code, .log {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <h1>Relatório do Trabalho</h1>
+        <p>Este documento apresenta o relatório do trabalho realizado, incluindo o código-fonte e o log dos testes executados.</p>
+    </header>
+
+    <!-- Relatório -->
+    <section id="relatorio">
+        <h2>Relatório de Desenvolvimento</h2>
+        <p>Aqui, descreva como o trabalho foi desenvolvido e quais foram os resultados obtidos. Use diagramas, figuras e explicações para ilustrar o processo.</p>
+        <img src="diagrama.png" alt="Diagrama do Trabalho" style="max-width:100%; margin-top:10px;">
+    </section>
+
+    <!-- Código Fonte -->
+    <section id="codigo">
+        <h2>Código Fonte Comentado</h2>
+        <p>O código-fonte utilizado está listado abaixo. Cada arquivo de código possui a extensão ".txt" para visualização direta no navegador.</p>
+        <div class="code">
+            <p><a href="programa.py.txt" target="_blank">Visualizar Código Fonte: programa.py.txt</a></p>
+        </div>
+    </section>
+
+    <!-- Log de Testes -->
+    <section id="log">
+        <h2>Log dos Testes Executados</h2>
+        <p>Abaixo, encontram-se os registros de testes realizados para verificar o funcionamento do programa em diferentes cenários.</p>
+        <div class="log">
+            <p>Teste 1: Entrada X, Saída esperada Y</p>
+            <p>Teste 2: Entrada Z, Saída esperada W</p>
+            <!-- Inclua mais logs conforme necessário -->
+        </div>
+    </section>
+
+    <!-- Geração do Vetor -->
+    <section id="vetor">
+        <h2>Gerar Vetor de Tamanho 1000</h2>
+        <button onclick="gerarVetor()">Clique aqui para gerar o vetor</button>
+        <div id="vetor-output" class="log" style="margin-top: 10px;"></div>
+    </section>
+
+    <!-- Script JavaScript -->
+    <script>
+        function gerarVetor() {
+            // Gera um vetor de tamanho 1000 com números aleatórios de 1 a 100
+            const vetor = Array.from({ length: 1000 }, () => Math.floor(Math.random() * 100) + 1);
+            
+            // Exibe o vetor na página
+            document.getElementById("vetor-output").innerText = "Vetor gerado: [" + vetor.join(", ") + "]";
+        }
+    </script>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Projeto de Desenvolvimento Web</p>
+    </footer>
+
+</body>
+</html>
